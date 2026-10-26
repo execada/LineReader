@@ -1,0 +1,14 @@
+{
+  "$schema": "https://unpkg.com/knip@6/schema.json",
+  "entry": [
+    "scripts/*.ts",
+    "plugins/*.cjs",
+    "src/**/*.test.ts"
+  ],
+  "project": [
+    "src/**/*.{ts,tsx}",
+    "scripts/*.ts",
+    "plugins/*.cjs",
+    "modules/sverka-ocr/src/*.ts"
+  ]
+}

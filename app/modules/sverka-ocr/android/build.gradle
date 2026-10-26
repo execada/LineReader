@@ -1,0 +1,21 @@
+plugins {
+  id 'com.android.library'
+  id 'expo-module-gradle-plugin'
+}
+
+group = 'app.sverka.ocr'
+version = '0.1.0'
+
+android {
+  namespace 'app.sverka.ocr'
+  defaultConfig {
+    versionCode 1
+    versionName '0.1.0'
+  }
+}
+
+dependencies {
+  // Tesseract 5.5.1 for Android, Apache-2.0: https://github.com/adaptech-cz/Tesseract4Android
+  implementation 'cz.adaptech.tesseract4android:tesseract4android:4.9.0'
+  implementation 'androidx.exifinterface:exifinterface:1.4.1'
+}

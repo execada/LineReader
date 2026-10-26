@@ -1,0 +1,733 @@
+[
+ {
+  "name": "ru_clean",
+  "doc": "ru",
+  "variant": "clean",
+  "synthetic": true,
+  "missing": false,
+  "cer": {
+   "edits": 13,
+   "ref_len": 694,
+   "rate": 0.018731988472622477
+  },
+  "wer": {
+   "edits": 5,
+   "ref_len": 107,
+   "rate": 0.04672897196261682
+  }
+ },
+ {
+  "name": "ru_scan_skew",
+  "doc": "ru",
+  "variant": "scan_skew",
+  "synthetic": true,
+  "missing": false,
+  "cer": {
+   "edits": 25,
+   "ref_len": 694,
+   "rate": 0.03602305475504323
+  },
+  "wer": {
+   "edits": 8,
+   "ref_len": 107,
+   "rate": 0.07476635514018691
+  }
+ },
+ {
+  "name": "ru_photo_perspective",
+  "doc": "ru",
+  "variant": "photo_perspective",
+  "synthetic": true,
+  "missing": false,
+  "cer": {
+   "edits": 22,
+   "ref_len": 694,
+   "rate": 0.03170028818443804
+  },
+  "wer": {
+   "edits": 11,
+   "ref_len": 107,
+   "rate": 0.102803738317757
+  }
+ },
+ {
+  "name": "ru_lowlight",
+  "doc": "ru",
+  "variant": "lowlight",
+  "synthetic": true,
+  "missing": false,
+  "cer": {
+   "edits": 347,
+   "ref_len": 694,
+   "rate": 0.5
+  },
+  "wer": {
+   "edits": 63,
+   "ref_len": 107,
+   "rate": 0.5887850467289719
+  }
+ },
+ {
+  "name": "ru_blur_lowres",
+  "doc": "ru",
+  "variant": "blur_lowres",
+  "synthetic": true,
+  "missing": false,
+  "cer": {
+   "edits": 349,
+   "ref_len": 694,
+   "rate": 0.5028818443804035
+  },
+  "wer": {
+   "edits": 113,
+   "ref_len": 107,
+   "rate": 1.0560747663551402
+  }
+ },
+ {
+  "name": "en_clean",
+  "doc": "en",
+  "variant": "clean",
+  "synthetic": true,
+  "missing": false,
+  "cer": {
+   "edits": 1,
+   "ref_len": 760,
+   "rate": 0.0013157894736842105
+  },
+  "wer": {
+   "edits": 1,
+   "ref_len": 121,
+   "rate": 0.008264462809917356
+  }
+ },
+ {
+  "name": "en_scan_skew",
+  "doc": "en",
+  "variant": "scan_skew",
+  "synthetic": true,
+  "missing": false,
+  "cer": {
+   "edits": 21,
+   "ref_len": 760,
+   "rate": 0.02763157894736842
+  },
+  "wer": {
+   "edits": 8,
+   "ref_len": 121,
+   "rate": 0.06611570247933884
+  }
+ },
+ {
+  "name": "en_photo_perspective",
+  "doc": "en",
+  "variant": "photo_perspective",
+  "synthetic": true,
+  "missing": false,
+  "cer": {
+   "edits": 4,
+   "ref_len": 760,
+   "rate": 0.005263157894736842
+  },
+  "wer": {
+   "edits": 2,
+   "ref_len": 121,
+   "rate": 0.01652892561983471
+  }
+ },
+ {
+  "name": "en_lowlight",
+  "doc": "en",
+  "variant": "lowlight",
+  "synthetic": true,
+  "missing": false,
+  "cer": {
+   "edits": 18,
+   "ref_len": 760,
+   "rate": 0.02368421052631579
+  },
+  "wer": {
+   "edits": 13,
+   "ref_len": 121,
+   "rate": 0.10743801652892562
+  }
+ },
+ {
+  "name": "en_blur_lowres",
+  "doc": "en",
+  "variant": "blur_lowres",
+  "synthetic": true,
+  "missing": false,
+  "cer": {
+   "edits": 238,
+   "ref_len": 760,
+   "rate": 0.3131578947368421
+  },
+  "wer": {
+   "edits": 81,
+   "ref_len": 121,
+   "rate": 0.6694214876033058
+  }
+ },
+ {
+  "name": "de_clean",
+  "doc": "de",
+  "variant": "clean",
+  "synthetic": true,
+  "missing": false,
+  "cer": {
+   "edits": 3,
+   "ref_len": 792,
+   "rate": 0.003787878787878788
+  },
+  "wer": {
+   "edits": 1,
+   "ref_len": 99,
+   "rate": 0.010101010101010102
+  }
+ },
+ {
+  "name": "de_scan_skew",
+  "doc": "de",
+  "variant": "scan_skew",
+  "synthetic": true,
+  "missing": false,
+  "cer": {
+   "edits": 6,
+   "ref_len": 792,
+   "rate": 0.007575757575757576
+  },
+  "wer": {
+   "edits": 3,
+   "ref_len": 99,
+   "rate": 0.030303030303030304
+  }
+ },
+ {
+  "name": "de_photo_perspective",
+  "doc": "de",
+  "variant": "photo_perspective",
+  "synthetic": true,
+  "missing": false,
+  "cer": {
+   "edits": 40,
+   "ref_len": 792,
+   "rate": 0.050505050505050504
+  },
+  "wer": {
+   "edits": 33,
+   "ref_len": 99,
+   "rate": 0.3333333333333333
+  }
+ },
+ {
+  "name": "de_lowlight",
+  "doc": "de",
+  "variant": "lowlight",
+  "synthetic": true,
+  "missing": false,
+  "cer": {
+   "edits": 680,
+   "ref_len": 792,
+   "rate": 0.8585858585858586
+  },
+  "wer": {
+   "edits": 90,
+   "ref_len": 99,
+   "rate": 0.9090909090909091
+  }
+ },
+ {
+  "name": "de_blur_lowres",
+  "doc": "de",
+  "variant": "blur_lowres",
+  "synthetic": true,
+  "missing": false,
+  "cer": {
+   "edits": 558,
+   "ref_len": 792,
+   "rate": 0.7045454545454546
+  },
+  "wer": {
+   "edits": 96,
+   "ref_len": 99,
+   "rate": 0.9696969696969697
+  }
+ },
+ {
+  "name": "pl_clean",
+  "doc": "pl",
+  "variant": "clean",
+  "synthetic": true,
+  "missing": false,
+  "cer": {
+   "edits": 1,
+   "ref_len": 724,
+   "rate": 0.0013812154696132596
+  },
+  "wer": {
+   "edits": 1,
+   "ref_len": 111,
+   "rate": 0.009009009009009009
+  }
+ },
+ {
+  "name": "pl_scan_skew",
+  "doc": "pl",
+  "variant": "scan_skew",
+  "synthetic": true,
+  "missing": false,
+  "cer": {
+   "edits": 8,
+   "ref_len": 724,
+   "rate": 0.011049723756906077
+  },
+  "wer": {
+   "edits": 6,
+   "ref_len": 111,
+   "rate": 0.05405405405405406
+  }
+ },
+ {
+  "name": "pl_photo_perspective",
+  "doc": "pl",
+  "variant": "photo_perspective",
+  "synthetic": true,
+  "missing": false,
+  "cer": {
+   "edits": 19,
+   "ref_len": 724,
+   "rate": 0.026243093922651933
+  },
+  "wer": {
+   "edits": 8,
+   "ref_len": 111,
+   "rate": 0.07207207207207207
+  }
+ },
+ {
+  "name": "pl_lowlight",
+  "doc": "pl",
+  "variant": "lowlight",
+  "synthetic": true,
+  "missing": false,
+  "cer": {
+   "edits": 473,
+   "ref_len": 724,
+   "rate": 0.6533149171270718
+  },
+  "wer": {
+   "edits": 81,
+   "ref_len": 111,
+   "rate": 0.7297297297297297
+  }
+ },
+ {
+  "name": "pl_blur_lowres",
+  "doc": "pl",
+  "variant": "blur_lowres",
+  "synthetic": true,
+  "missing": false,
+  "cer": {
+   "edits": 318,
+   "ref_len": 724,
+   "rate": 0.43922651933701656
+  },
+  "wer": {
+   "edits": 105,
+   "ref_len": 111,
+   "rate": 0.9459459459459459
+  }
+ },
+ {
+  "name": "tr_clean",
+  "doc": "tr",
+  "variant": "clean",
+  "synthetic": true,
+  "missing": false,
+  "cer": {
+   "edits": 5,
+   "ref_len": 746,
+   "rate": 0.006702412868632708
+  },
+  "wer": {
+   "edits": 3,
+   "ref_len": 104,
+   "rate": 0.028846153846153848
+  }
+ },
+ {
+  "name": "tr_scan_skew",
+  "doc": "tr",
+  "variant": "scan_skew",
+  "synthetic": true,
+  "missing": false,
+  "cer": {
+   "edits": 9,
+   "ref_len": 746,
+   "rate": 0.012064343163538873
+  },
+  "wer": {
+   "edits": 5,
+   "ref_len": 104,
+   "rate": 0.04807692307692308
+  }
+ },
+ {
+  "name": "tr_photo_perspective",
+  "doc": "tr",
+  "variant": "photo_perspective",
+  "synthetic": true,
+  "missing": false,
+  "cer": {
+   "edits": 115,
+   "ref_len": 746,
+   "rate": 0.15415549597855227
+  },
+  "wer": {
+   "edits": 43,
+   "ref_len": 104,
+   "rate": 0.41346153846153844
+  }
+ },
+ {
+  "name": "tr_lowlight",
+  "doc": "tr",
+  "variant": "lowlight",
+  "synthetic": true,
+  "missing": false,
+  "cer": {
+   "edits": 435,
+   "ref_len": 746,
+   "rate": 0.5831099195710456
+  },
+  "wer": {
+   "edits": 81,
+   "ref_len": 104,
+   "rate": 0.7788461538461539
+  }
+ },
+ {
+  "name": "tr_blur_lowres",
+  "doc": "tr",
+  "variant": "blur_lowres",
+  "synthetic": true,
+  "missing": false,
+  "cer": {
+   "edits": 262,
+   "ref_len": 746,
+   "rate": 0.3512064343163539
+  },
+  "wer": {
+   "edits": 85,
+   "ref_len": 104,
+   "rate": 0.8173076923076923
+  }
+ },
+ {
+  "name": "ar_clean",
+  "doc": "ar",
+  "variant": "clean",
+  "synthetic": true,
+  "missing": false,
+  "cer": {
+   "edits": 60,
+   "ref_len": 640,
+   "rate": 0.09375
+  },
+  "wer": {
+   "edits": 21,
+   "ref_len": 106,
+   "rate": 0.19811320754716982
+  }
+ },
+ {
+  "name": "ar_scan_skew",
+  "doc": "ar",
+  "variant": "scan_skew",
+  "synthetic": true,
+  "missing": false,
+  "cer": {
+   "edits": 91,
+   "ref_len": 640,
+   "rate": 0.1421875
+  },
+  "wer": {
+   "edits": 25,
+   "ref_len": 106,
+   "rate": 0.2358490566037736
+  }
+ },
+ {
+  "name": "ar_photo_perspective",
+  "doc": "ar",
+  "variant": "photo_perspective",
+  "synthetic": true,
+  "missing": false,
+  "cer": {
+   "edits": 184,
+   "ref_len": 640,
+   "rate": 0.2875
+  },
+  "wer": {
+   "edits": 50,
+   "ref_len": 106,
+   "rate": 0.4716981132075472
+  }
+ },
+ {
+  "name": "ar_lowlight",
+  "doc": "ar",
+  "variant": "lowlight",
+  "synthetic": true,
+  "missing": false,
+  "cer": {
+   "edits": 418,
+   "ref_len": 640,
+   "rate": 0.653125
+  },
+  "wer": {
+   "edits": 91,
+   "ref_len": 106,
+   "rate": 0.8584905660377359
+  }
+ },
+ {
+  "name": "ar_blur_lowres",
+  "doc": "ar",
+  "variant": "blur_lowres",
+  "synthetic": true,
+  "missing": false,
+  "cer": {
+   "edits": 153,
+   "ref_len": 640,
+   "rate": 0.2390625
+  },
+  "wer": {
+   "edits": 62,
+   "ref_len": 106,
+   "rate": 0.5849056603773585
+  }
+ },
+ {
+  "name": "zh_clean",
+  "doc": "zh",
+  "variant": "clean",
+  "synthetic": true,
+  "missing": false,
+  "cer": {
+   "edits": 125,
+   "ref_len": 328,
+   "rate": 0.38109756097560976
+  },
+  "wer": {
+   "edits": 20,
+   "ref_len": 14,
+   "rate": 1.4285714285714286
+  }
+ },
+ {
+  "name": "zh_scan_skew",
+  "doc": "zh",
+  "variant": "scan_skew",
+  "synthetic": true,
+  "missing": false,
+  "cer": {
+   "edits": 20,
+   "ref_len": 328,
+   "rate": 0.06097560975609756
+  },
+  "wer": {
+   "edits": 11,
+   "ref_len": 14,
+   "rate": 0.7857142857142857
+  }
+ },
+ {
+  "name": "zh_photo_perspective",
+  "doc": "zh",
+  "variant": "photo_perspective",
+  "synthetic": true,
+  "missing": false,
+  "cer": {
+   "edits": 47,
+   "ref_len": 328,
+   "rate": 0.14329268292682926
+  },
+  "wer": {
+   "edits": 14,
+   "ref_len": 14,
+   "rate": 1
+  }
+ },
+ {
+  "name": "zh_lowlight",
+  "doc": "zh",
+  "variant": "lowlight",
+  "synthetic": true,
+  "missing": false,
+  "cer": {
+   "edits": 39,
+   "ref_len": 328,
+   "rate": 0.11890243902439024
+  },
+  "wer": {
+   "edits": 14,
+   "ref_len": 14,
+   "rate": 1
+  }
+ },
+ {
+  "name": "zh_blur_lowres",
+  "doc": "zh",
+  "variant": "blur_lowres",
+  "synthetic": true,
+  "missing": false,
+  "cer": {
+   "edits": 305,
+   "ref_len": 328,
+   "rate": 0.9298780487804879
+  },
+  "wer": {
+   "edits": 14,
+   "ref_len": 14,
+   "rate": 1
+  }
+ },
+ {
+  "name": "ru_en_clean",
+  "doc": "ru_en",
+  "variant": "clean",
+  "synthetic": true,
+  "missing": false,
+  "cer": {
+   "edits": 4,
+   "ref_len": 583,
+   "rate": 0.00686106346483705
+  },
+  "wer": {
+   "edits": 1,
+   "ref_len": 87,
+   "rate": 0.011494252873563218
+  }
+ },
+ {
+  "name": "ru_en_photo_perspective",
+  "doc": "ru_en",
+  "variant": "photo_perspective",
+  "synthetic": true,
+  "missing": false,
+  "cer": {
+   "edits": 206,
+   "ref_len": 583,
+   "rate": 0.35334476843910806
+  },
+  "wer": {
+   "edits": 52,
+   "ref_len": 87,
+   "rate": 0.5977011494252874
+  }
+ },
+ {
+  "name": "table_ru_clean",
+  "doc": "table_ru",
+  "variant": "clean",
+  "synthetic": true,
+  "missing": false,
+  "cer": {
+   "edits": 28,
+   "ref_len": 355,
+   "rate": 0.07887323943661972
+  },
+  "wer": {
+   "edits": 15,
+   "ref_len": 65,
+   "rate": 0.23076923076923078
+  }
+ },
+ {
+  "name": "table_ru_photo_perspective",
+  "doc": "table_ru",
+  "variant": "photo_perspective",
+  "synthetic": true,
+  "missing": false,
+  "cer": {
+   "edits": 40,
+   "ref_len": 355,
+   "rate": 0.11267605633802817
+  },
+  "wer": {
+   "edits": 18,
+   "ref_len": 65,
+   "rate": 0.27692307692307694
+  }
+ },
+ {
+  "name": "table_en_clean",
+  "doc": "table_en",
+  "variant": "clean",
+  "synthetic": true,
+  "missing": false,
+  "cer": {
+   "edits": 18,
+   "ref_len": 349,
+   "rate": 0.05157593123209169
+  },
+  "wer": {
+   "edits": 10,
+   "ref_len": 58,
+   "rate": 0.1724137931034483
+  }
+ },
+ {
+  "name": "table_en_photo_perspective",
+  "doc": "table_en",
+  "variant": "photo_perspective",
+  "synthetic": true,
+  "missing": false,
+  "cer": {
+   "edits": 40,
+   "ref_len": 349,
+   "rate": 0.11461318051575932
+  },
+  "wer": {
+   "edits": 18,
+   "ref_len": 58,
+   "rate": 0.3103448275862069
+  }
+ },
+ {
+  "name": "table_de_clean",
+  "doc": "table_de",
+  "variant": "clean",
+  "synthetic": true,
+  "missing": false,
+  "cer": {
+   "edits": 10,
+   "ref_len": 345,
+   "rate": 0.028985507246376812
+  },
+  "wer": {
+   "edits": 5,
+   "ref_len": 53,
+   "rate": 0.09433962264150944
+  }
+ },
+ {
+  "name": "table_de_photo_perspective",
+  "doc": "table_de",
+  "variant": "photo_perspective",
+  "synthetic": true,
+  "missing": false,
+  "cer": {
+   "edits": 115,
+   "ref_len": 345,
+   "rate": 0.3333333333333333
+  },
+  "wer": {
+   "edits": 36,
+   "ref_len": 53,
+   "rate": 0.6792452830188679
+  }
+ }
+]

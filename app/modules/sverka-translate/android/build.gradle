@@ -1,0 +1,20 @@
+plugins {
+  id 'com.android.library'
+  id 'expo-module-gradle-plugin'
+}
+
+group = 'app.sverka.translate'
+version = '0.1.0'
+
+android {
+  namespace 'app.sverka.translate'
+  defaultConfig {
+    versionCode 1
+    versionName '0.1.0'
+  }
+}
+
+dependencies {
+  // ML Kit on-device translation; models are downloaded once, text stays on the phone.
+  implementation 'com.google.mlkit:translate:17.0.3'
+}

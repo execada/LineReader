@@ -1,0 +1,5 @@
+{"synthetic": true, "images": [
+ {"file": "images/ru_clean.png", "doc": "ru", "kind": "text", "variant": "clean", "synthetic": true, "languages": ["ru"], "ground_truth": "ground_truth/ru.txt"},
+ {"file": "images/ru_lowlight.jpg", "doc": "ru", "kind": "text", "variant": "lowlight", "synthetic": true, "languages": ["ru"], "ground_truth": "ground_truth/ru.txt"},
+ {"file": "images/table_ru_clean.png", "doc": "table_ru", "kind": "table", "variant": "clean", "synthetic": true, "languages": ["ru"], "ground_truth": "ground_truth/table_ru.csv", "lines": [{"text": "Акт"}]}
+]}

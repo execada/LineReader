@@ -1,0 +1,41 @@
+# Главный сценарий на Android: снимок из галереи → распознавание Tesseract на телефоне →
+# копирование → перевод на телефоне (ML Kit, при первом запуске скачивает модель) →
+# сверка строки → сохранение PDF. Снимок кладёт e2e/run-android.sh.
+appId: app.sverka.mvp
+---
+- launchApp:
+    clearState: true
+- assertVisible: "Текстов пока нет."
+- tapOn: "Из фото"
+# The system photo picker: the first photo, then «Done» / «Готово».
+- extendedWaitUntil:
+    visible: "Photos|Фото"
+    timeout: 15000
+- tapOn:
+    point: "16%,52%"
+- tapOn: "Done|Готово"
+- extendedWaitUntil:
+    visible: "Копировать"
+    timeout: 60000
+- tapOn: "Копировать"
+- assertVisible: "Текст скопирован"
+- tapOn: "Перевести"
+- extendedWaitUntil:
+    visible: "Перевести"
+    timeout: 10000
+- tapOn:
+    text: "Перевести"
+    index: 0
+- extendedWaitUntil:
+    visible: "Копировать перевод"
+    timeout: 120000
+- tapOn: "Копировать перевод"
+- assertVisible: "Перевод скопирован"
+- back
+- tapOn: "Сверить \\d+"
+- assertVisible: "Сверить \\d+ строк[а-я]*"
+- tapOn: "Верно"
+- back
+- tapOn: "Сохранить"
+- assertVisible: "Экспорт"
+- tapOn: "Сохранить PDF"

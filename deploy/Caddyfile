@@ -1,0 +1,26 @@
+{
+	# Журналы Caddy (и ошибок, и TLS) содержат адреса клиентов; по правилам проекта их нет.
+	log {
+		output discard
+	}
+	servers {
+		timeouts {
+			read_header 10s
+			read_body 60s
+			idle 2m
+		}
+	}
+}
+
+{$SVERKA_DOMAIN} {
+	request_body {
+		max_size 10MiB
+	}
+	header {
+		Strict-Transport-Security "max-age=31536000"
+		-Server
+	}
+	reverse_proxy sverka:8080 {
+		header_up X-Forwarded-For {remote_host}
+	}
+}

@@ -1,0 +1,10 @@
+.DS_Store
+.tessdata/
+eval/results/raw/
+backend/coverage.out
+*.test
+.dart_tool/
+build/
+eval/.bin/
+node_modules/
+.env

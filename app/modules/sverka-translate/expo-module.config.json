@@ -1,0 +1,5 @@
+{
+  "platforms": ["apple", "android"],
+  "apple": { "modules": ["SverkaTranslateModule"] },
+  "android": { "modules": ["app.sverka.translate.SverkaTranslateModule"] }
+}

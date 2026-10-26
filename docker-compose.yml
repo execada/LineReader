@@ -1,0 +1,46 @@
+# Бэкенд за Caddy с автоматическим HTTPS. Переменные: SVERKA_TOKEN, SVERKA_DOMAIN (в .env рядом).
+# Порт 8080 сервиса sverka нельзя публиковать наружу: при SVERKA_TRUST_PROXY=1 сервер верит
+# X-Forwarded-For, и прямой доступ позволил бы подставлять адрес и обходить лимит частоты.
+x-logs: &logs
+  driver: json-file
+  options: {max-size: "5m", max-file: "2"}
+
+services:
+  sverka:
+    build: ./backend
+    environment:
+      SVERKA_TOKEN: ${SVERKA_TOKEN:?set SVERKA_TOKEN}
+      SVERKA_TRUST_PROXY: "1"
+      SVERKA_RATE_PER_MINUTE: ${SVERKA_RATE_PER_MINUTE:-60}
+      SVERKA_RATE_BURST: ${SVERKA_RATE_BURST:-40}
+    read_only: true
+    cap_drop: [ALL]
+    security_opt: ["no-new-privileges:true"]
+    mem_limit: 2g
+    cpus: 4
+    pids_limit: 128
+    restart: unless-stopped
+    expose: ["8080"]
+    logging: *logs
+
+  caddy:
+    image: caddy:2.10
+    depends_on: [sverka]
+    environment:
+      SVERKA_DOMAIN: ${SVERKA_DOMAIN:-localhost}
+    ports: ["80:80", "443:443"]
+    volumes:
+      - ./deploy/Caddyfile:/etc/caddy/Caddyfile:ro
+      - caddy_data:/data
+      - caddy_config:/config
+    read_only: true
+    cap_drop: [ALL]
+    cap_add: [NET_BIND_SERVICE]
+    security_opt: ["no-new-privileges:true"]
+    restart: unless-stopped
+    # Журнал Caddy содержит адреса клиентов, поэтому он отключён.
+    logging: {driver: none}
+
+volumes:
+  caddy_data:
+  caddy_config:

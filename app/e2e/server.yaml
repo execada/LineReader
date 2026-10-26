@@ -1,0 +1,45 @@
+# Второе мнение: адрес и ключ локального сервера, согласие, отправка кусков.
+# Нужны SERVER_URL и SVERKA_TOKEN (e2e/run-ios.sh поднимает бэкенд за Caddy с HTTPS).
+appId: app.sverka.mvp
+---
+- launchApp:
+    clearState: true
+- tapOn: "Сервер"
+- extendedWaitUntil:
+    visible: "Ключ доступа"
+    timeout: 15000
+- tapOn: "https://"
+- eraseText: 20
+- inputText: ${SERVER_URL}
+- tapOn:
+    below: "Ключ доступа"
+- inputText: ${SVERKA_TOKEN}
+- tapOn: "Сохранить"
+- assertVisible: "Текстов пока нет."
+- tapOn: "Из фото"
+# The photo picker runs in a separate system process and may take a few seconds
+# to accept taps, so pick the first photo and confirm until the app is back.
+- repeat:
+    times: 6
+    while:
+      notVisible: "Сверить.*|Распознаю.*|Готовлю.*"
+    commands:
+      - waitForAnimationToEnd:
+          timeout: 3000
+      - tapOn:
+          point: "16%,24%"
+      - tapOn:
+          point: "90%,11%"
+- extendedWaitUntil:
+    visible: "Копировать"
+    timeout: 30000
+- tapOn: "Сверить 1"
+- assertVisible: "Сверить 1 строка"
+- tapOn: "Уточнить .* на сервере"
+- assertVisible: "Отправить \\d+ кус[а-я]+ на сервер\\?"
+- assertVisible: ".*целое фото остаются на телефоне"
+- assertVisible: "Спрашивать каждый раз"
+- tapOn: "Отправить \\d+ кус[а-я]+"
+- extendedWaitUntil:
+    visible: "Сервер · .*"
+    timeout: 60000

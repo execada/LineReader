@@ -1,0 +1,15 @@
+# Политика конфиденциальности и «О программе» из настроек сервера.
+appId: app.sverka.mvp
+---
+- launchApp:
+    clearState: true
+- tapOn: "Сервер"
+- tapOn: "Политика конфиденциальности"
+- assertVisible: "Что уходит с телефона"
+- takeScreenshot: privacy25
+- tapOn: "Назад"
+- tapOn: "О программе и лицензии"
+- scrollUntilVisible:
+    element: "Шрифты"
+- tapOn: "Назад"
+- assertVisible: "Ключ доступа"

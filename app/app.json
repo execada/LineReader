@@ -1,0 +1,66 @@
+{
+  "expo": {
+    "name": "Сверка",
+    "slug": "sverka",
+    "version": "0.1.0",
+    "orientation": "portrait",
+    "userInterfaceStyle": "light",
+    "backgroundColor": "#F4F1EA",
+    "ios": {
+      "bundleIdentifier": "app.sverka.mvp",
+      "supportsTablet": false,
+      "infoPlist": {
+        "NSCameraUsageDescription": "Камера нужна, чтобы снять текст. Снимок распознаётся на телефоне.",
+        "NSPhotoLibraryUsageDescription": "Доступ к фото нужен, чтобы выбрать снимок с текстом. Приложение берёт только выбранные снимки."
+      },
+      "backgroundColor": "#F4F1EA"
+    },
+    "android": {
+      "package": "app.sverka.mvp",
+      "permissions": [
+        "android.permission.CAMERA"
+      ],
+      "allowBackup": false,
+      "backgroundColor": "#F4F1EA"
+    },
+    "plugins": [
+      [
+        "expo-build-properties",
+        {
+          "ios": {
+            "deploymentTarget": "17.0"
+          },
+          "android": {
+            "minSdkVersion": 26
+          }
+        }
+      ],
+      [
+        "react-native-document-scanner-plugin",
+        {
+          "cameraPermission": "Камера нужна, чтобы снять текст. Снимок распознаётся на телефоне."
+        }
+      ],
+      [
+        "expo-image-picker",
+        {
+          "photosPermission": "Доступ к фото нужен, чтобы выбрать снимок с текстом. Приложение берёт только выбранные снимки."
+        }
+      ],
+      "expo-font",
+      [
+        "expo-camera",
+        {
+          "cameraPermission": "Камера нужна, чтобы снять текст. Снимок распознаётся на телефоне.",
+          "recordAudioAndroid": false,
+          "barcodeScannerEnabled": false
+        }
+      ],
+      "./plugins/withSceneLifecycle.cjs",
+      "./plugins/withAbiSplits.cjs"
+    ],
+    "updates": {
+      "enabled": false
+    }
+  }
+}

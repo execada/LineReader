@@ -1,0 +1,5 @@
+{
+  "platforms": ["apple", "android"],
+  "apple": { "modules": ["SverkaSpellModule"] },
+  "android": { "modules": ["app.sverka.spell.SverkaSpellModule"] }
+}

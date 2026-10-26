@@ -1,0 +1,50 @@
+# Главный сценарий «Сверки» офлайн: снимок из фото → распознавание на телефоне →
+# текст и копирование сразу после снимка → сверка строки → «Всё сверено» → PDF. Перед запуском в фото симулятора кладётся
+# eval/synthetic/images/ru_photo_perspective.jpg (см. e2e/run-ios.sh).
+appId: app.sverka.mvp
+---
+- launchApp:
+    clearState: true
+- assertVisible: "Текстов пока нет."
+- tapOn: "Из фото"
+# The photo picker runs in a separate system process and may take a few seconds
+# to accept taps, so pick the first photo and confirm until the app is back.
+- repeat:
+    times: 6
+    while:
+      notVisible: "Сверить.*|Распознаю.*|Готовлю.*"
+    commands:
+      - waitForAnimationToEnd:
+          timeout: 3000
+      - tapOn:
+          point: "16%,24%"
+      - tapOn:
+          point: "90%,11%"
+- extendedWaitUntil:
+    visible: "Копировать"
+    timeout: 30000
+- assertVisible: "Текст · RU \\+ EN"
+- assertVisible: "Копировать можно сразу, сверка по желанию."
+- tapOn: "Копировать"
+- assertVisible: "Текст скопирован"
+- tapOn: ".*весь текст.*"
+- assertVisible: "Долгое нажатие на строку копирует её."
+# The page title repeats the first line, so the second match is the line itself.
+- longPressOn:
+    text: "АКТ ПРИЁМКИ.*"
+    index: 1
+- assertVisible: "Строка скопирована"
+- tapOn: "Копировать текст"
+- assertVisible: "Текст скопирован"
+- tapOn: "1 строка к сверке.*"
+- assertVisible: "Сверить 1 строка"
+- assertVisible: "Офлайн · телефон"
+- assertVisible: "Цифры рядом с похожими буквами (0 и О, 1 и l)"
+- tapOn: "Верно"
+- assertVisible: "Всё сверено"
+- tapOn: "Сохранить TXT или PDF"
+- assertVisible: "Экспорт"
+- tapOn: "Сохранить PDF"
+- extendedWaitUntil:
+    visible: "PDF-документ.*"
+    timeout: 20000
